@@ -1,0 +1,38 @@
+#QuickStats {
+    width: 237px;
+    height: 105px;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.3);
+    font-size: 13px;
+    padding: 0.02px 0px 0.1px 10px;
+}
+
+#QuickStats div {
+    height: 33px;
+    line-height: 33px;
+}
+
+#QuickStats div:first-child {
+    margin-top: 5px;
+}
+
+#QuickStats img {
+    height: 17px;
+    width: 17px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#QuickStats span {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#ShareCurrentGrade {
+    cursor: pointer;
+}
+
+#UpdateGrades {
+    cursor: pointer;
+}

@@ -1,0 +1,199 @@
+#wrapper{
+    width:660px;
+    margin: 0 auto;
+}
+.SettingsBoard{
+    width:635px;
+    background: #fff;
+    -webkit-box-shadow:  0px 3px 7px 1px rgba(0, 0, 0, .32);
+    box-shadow:  0px 3px 7px 1px rgba(0, 0, 0, .32);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    float:left;
+    padding: 5px 12px 0px 12px;
+    margin-top: 20px;
+}
+.BoardTitle{
+    width: 635px;
+    border-bottom: 1px solid #b5b5b5;
+    margin: 0 auto;
+    font-size: 19px;
+    padding: 7px 0px 5px 5px;
+}
+.SettingSubTitle{
+    font-size: 16px;
+    color:#363636;
+    border-bottom: 1px solid #363636;
+}
+
+.ChangeOptionText {
+    color: #363636;
+    float: left;
+    margin-right: 10px;
+}
+
+.ChangeOptionTextReturnMessage {
+    float: left;
+    margin-right: 10px;
+    display: none;
+    color: #DF0000;
+}
+
+.ChangeOption {
+    margin: 5px auto;
+    font-size: 16px;
+    width: 415px;
+    clear: both;
+}
+
+.LoginAccount{
+    margin-top: 10px;
+    width: 300px;
+}
+.LoginLogo{
+    width: 95px;
+    height: 35px;
+    float:left;
+    margin-top: 3px;
+}
+.LoginLink{
+    border-left: 1px #a3a3a3 solid;
+    height: 75px;
+    float:right;
+    width: 195px;
+    padding-left: 7px;
+}
+.LinkedLabel{
+    font-size: 12px;
+}
+.LinkedAccountName{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.ChangeAccount{
+    width: 165px;
+    height: 25px;
+    text-align:center;
+    font-size: 13px;
+    line-height: 25px;
+}
+.AddAccountButton{
+    width: 165px;
+    height: 45px;
+    line-height: 45px;
+    text-align:center;
+    margin-top: 15px;
+}
+#Name{
+    float:left;
+    font-size: 24px;
+    font-weight: 400;
+}
+#MemberType{
+    position:relative;
+    top: 7px;
+    float:right;
+    font-size: 17px;
+}
+#LoginAccountColumn{
+    float:left;
+    width: 300px;
+    height: 200px;
+    padding:5px;
+}
+#PowerschoolLoginColumn{
+    float:right;
+    width: 300px;
+    height: 200px;
+    padding:5px;
+}
+
+#GoogleLogo{
+    background:url('/images/logos/GoogleLogoSmall.png');
+}
+#YahooLogo{
+    background:url('/images/logos/YahooLogoSmall.png');
+}
+
+#PowerschoolInformationTable tr{
+    position:relative;
+    top: -1px;
+}
+#PowerschoolInformationTable td:first-child{
+    border-right: 1px solid #a3a3a3;
+    padding-right: 7px;
+    text-align:right;
+
+}
+#PowerschoolInformationTable td:last-child{
+    padding-left: 7px;
+    font-weight: 400;
+}
+
+#GoogleChangeAccountButton {
+    margin-top: 9px;
+}
+
+#LightBox {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+#ChangeBox {
+    left: 50%;
+    z-index: 1000;
+    margin: 5% auto;
+    width: 640px;
+    height: 225px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    background: #fefefe; /* Old browsers */
+    background: -moz-linear-gradient(top, #fefefe 0%, #dddddd 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #dddddd)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fefefe 0%, #dddddd 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fefefe 0%, #dddddd 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #fefefe 0%, #dddddd 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #fefefe 0%, #dddddd 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#dddddd', GradientType=0); /* IE6-9 */
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.36);
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.36);
+    opacity: 1;
+    cursor: default;
+}
+
+.ChangeBoxContent {
+    padding: 25px;
+    display: none;
+    margin: auto;
+}
+
+input[type="text"], input[type="password"] {
+    position: relative;
+    top: -7px;
+    font-size: 16px;
+}
+
+.CSSButtons {
+    -webkit-font-smoothing: antialiased !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+    width: 150px;
+    line-height: 44px;
+    background: #6DB3F2;
+    -webkit-box-shadow: 0px 0px 0px 1px rgba(30, 105, 222, 1), inset 1px 1px 0px 0px rgba(255, 255, 255, .31);
+    box-shadow: 0px 0px 0px 1px rgba(30, 105, 222, 1), inset 1px 1px 0px 0px rgba(255, 255, 255, .31);
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    margin: 0 auto;
+    margin-top: 50px;
+    cursor: pointer;
+}

@@ -1,0 +1,84 @@
+a {
+    text-decoration: none;
+}
+
+#Content {
+    margin-top: 10px;
+    position: relative;
+    background-color: #f4f4f4;
+    padding: 1px 25px 1px 25px;
+}
+
+/*Donate Buttons*/
+.DonateButton {
+    float: left;
+    height: 35px;
+    margin: 5px;
+}
+
+/*Top Banner*/
+#TopBanner {
+    width: 1152px;
+    height: 180px;
+    position: relative;
+    background-image: url('/images/BlurredInfoPagesBannerBG.png');;
+    margin-top: 9px;
+    cursor: default;
+}
+
+#TopBannerTextContainer {
+    width: 995px;
+    margin: auto;
+}
+
+#TopTitleText {
+    -webkit-font-smoothing: antialiased !important;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 55px;
+    font-weight: 300;
+    color: white;
+    text-shadow: 0px 1px 2px #000000;
+    filter: dropshadow(color=#000000, offx=0, offy=1);
+    position: absolute;
+    text-align: right;
+}
+
+#TopSubText {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    font-weight: 300;
+    color: white;
+    position: absolute;
+    line-height: 75px;
+}
+
+#TopBannerLeft {
+    float: left;
+    width: 400px;
+    padding: 10px 10px 5px 25px;
+}
+
+#TopBannerRight {
+    float: left;
+    width: 500px;
+    padding: 15px 10px 5px 10px;
+}
+
+#TopBannerVertLine {
+    width: 3px;
+    height: 130px;
+    background-color: #ffffff;
+    float: left;
+    margin: 23px 0px 0px 35px;
+}
+
+dt {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+dd {
+    margin: 0;
+    padding: 0 0 0.7em 0;
+    font-size: 1.2em;
+}

@@ -1,0 +1,155 @@
+html{
+    min-width: 1152px;
+    height: 100%;
+}
+body
+{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    font-weight: 300;
+    color:#282828;
+    background-color: #efefef;
+    min-width: 1152px;
+    height: 100%;
+}
+#wrapper
+{
+    width: 1152px;
+    margin: 0 auto;
+}
+
+/*Fonts*/
+@font-face
+{
+    font-family: "Helvetica Neue";
+    src: url('/fonts/HelveticaNeueLTStd-55-roman.otf');
+}
+@font-face
+{
+    font-family: "Helvetica Neue Bold";
+    src: url('/fonts/HelveticaNeueLTStd-Bd.otf');
+}
+@font-face
+{
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 300;
+    src:
+        url("/fonts/OpenSans/opensans-light-webfont.eot");
+    src: url("/fonts/OpenSans/opensans-light-webfont.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/OpenSans/opensans-light-webfont.woff") format("woff"),
+    url("/fonts/OpenSans/opensans-light-webfont.ttf")  format("truetype"),
+    url("/fonts/OpenSans/opensans-light-webfont.svg#OpenSans") format("svg");
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: "Open Sans";
+        src: url("/fonts/OpenSans/opensans-light-webfont.svg#OpenSans") format("svg");
+    }
+}
+@font-face
+{
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/OpenSans/opensans-regular-webfont.eot");
+    src: url("/fonts/OpenSans/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/OpenSans/opensans-regular-webfont.woff") format("woff"),
+    url("/fonts/OpenSans/opensans-regular-webfont.ttf")  format("truetype"),
+    url("/fonts/OpenSans/opensans-regular-webfont.svg#OpenSans") format("svg");
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: "Open Sans";
+        src: url("/fonts/OpenSans/opensans-regular-webfont.svg#OpenSans") format("svg");
+    }
+}
+
+/* Tiny Button */
+.tinybutton {
+    -webkit-border-radius: 4;
+    -moz-border-radius: 4;
+    border-radius: 4px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 10px;
+    background: #3498db;
+    padding: 3px 5px 3px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tinybutton:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+}
+
+/* Android Holo Textbox Style (Slickest CSS Ever): http://stackoverflow.com/questions/14479606/stylize-input-box-as-seen-on-android-developer-website-using-css/14479796#14479796*/
+input[type='text'], input[type='password'] {
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    outline: none;
+}
+
+input[type='text'], input[type='password'] {
+    background: transparent;
+    position: relative;
+    top: -3px;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 8px 8px 3px;
+    background: bottom left -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a9a9a9), color-stop(100%, #a9a9a9)) no-repeat, bottom center -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a9a9a9), color-stop(100%, #a9a9a9)) repeat-x, bottom right -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a9a9a9), color-stop(100%, #a9a9a9)) no-repeat;
+    background: bottom left -webkit-linear-gradient(#a9a9a9, #a9a9a9) no-repeat, bottom center -webkit-linear-gradient(#a9a9a9, #a9a9a9) repeat-x, bottom right -webkit-linear-gradient(#a9a9a9, #a9a9a9) no-repeat;
+    background: bottom left -moz-linear-gradient(#a9a9a9, #a9a9a9) no-repeat, bottom center -moz-linear-gradient(#a9a9a9, #a9a9a9) repeat-x, bottom right -moz-linear-gradient(#a9a9a9, #a9a9a9) no-repeat;
+    background: bottom left -o-linear-gradient(#a9a9a9, #a9a9a9) no-repeat, bottom center -o-linear-gradient(#a9a9a9, #a9a9a9) repeat-x, bottom right -o-linear-gradient(#a9a9a9, #a9a9a9) no-repeat;
+    background: bottom left linear-gradient(#a9a9a9, #a9a9a9) no-repeat, bottom center linear-gradient(#a9a9a9, #a9a9a9) repeat-x, bottom right linear-gradient(#a9a9a9, #a9a9a9) no-repeat;
+    -webkit-background-size: 1px 6px, 1px 1px, 1px 6px;
+    -moz-background-size: 1px 6px, 1px 1px, 1px 6px;
+    -o-background-size: 1px 6px, 1px 1px, 1px 6px;
+    background-size: 1px 6px, 1px 1px, 1px 6px;
+}
+input[disabled][type='password'], input[disabled][type='text'], input.disabled {
+    color: darkgrey;
+    background: bottom left -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cecece), color-stop(100%, #cecece)) no-repeat, bottom center -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cecece), color-stop(100%, #cecece)) repeat-x, bottom right -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cecece), color-stop(100%, #cecece)) no-repeat;
+    background: bottom left -webkit-linear-gradient(#cecece, #cecece) no-repeat, bottom center -webkit-linear-gradient(#cecece, #cecece) repeat-x, bottom right -webkit-linear-gradient(#cecece, #cecece) no-repeat;
+    background: bottom left -moz-linear-gradient(#cecece, #cecece) no-repeat, bottom center -moz-linear-gradient(#cecece, #cecece) repeat-x, bottom right -moz-linear-gradient(#cecece, #cecece) no-repeat;
+    background: bottom left -o-linear-gradient(#cecece, #cecece) no-repeat, bottom center -o-linear-gradient(#cecece, #cecece) repeat-x, bottom right -o-linear-gradient(#cecece, #cecece) no-repeat;
+    background: bottom left linear-gradient(#cecece, #cecece) no-repeat, bottom center linear-gradient(#cecece, #cecece) repeat-x, bottom right linear-gradient(#cecece, #cecece) no-repeat;
+    -webkit-background-size: 1px 6px, 1px 1px, 1px 6px;
+    -moz-background-size: 1px 6px, 1px 1px, 1px 6px;
+    -o-background-size: 1px 6px, 1px 1px, 1px 6px;
+    background-size: 1px 6px, 1px 1px, 1px 6px;
+}
+input[type='text']:focus, input[type='password']:focus {
+    background: bottom left -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0099cc), color-stop(100%, #0099cc)) no-repeat, bottom center -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0099cc), color-stop(100%, #0099cc)) repeat-x, bottom right -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0099cc), color-stop(100%, #0099cc)) no-repeat;
+    background: bottom left -webkit-linear-gradient(#0099cc, #0099cc) no-repeat, bottom center -webkit-linear-gradient(#0099cc, #0099cc) repeat-x, bottom right -webkit-linear-gradient(#0099cc, #0099cc) no-repeat;
+    background: bottom left -moz-linear-gradient(#0099cc, #0099cc) no-repeat, bottom center -moz-linear-gradient(#0099cc, #0099cc) repeat-x, bottom right -moz-linear-gradient(#0099cc, #0099cc) no-repeat;
+    background: bottom left -o-linear-gradient(#0099cc, #0099cc) no-repeat, bottom center -o-linear-gradient(#0099cc, #0099cc) repeat-x, bottom right -o-linear-gradient(#0099cc, #0099cc) no-repeat;
+    background: bottom left linear-gradient(#0099cc, #0099cc) no-repeat, bottom center linear-gradient(#0099cc, #0099cc) repeat-x, bottom right linear-gradient(#0099cc, #0099cc) no-repeat;
+    -webkit-background-size: 1px 6px, 1px 1px, 1px 6px;
+    -moz-background-size: 1px 6px, 1px 1px, 1px 6px;
+    -o-background-size: 1px 6px, 1px 1px, 1px 6px;
+    background-size: 1px 6px, 1px 1px, 1px 6px;
+}
+
+input.inputInvalid {
+    background: bottom left -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fd1400), color-stop(100%, #fd1400)) no-repeat, bottom center -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fd1400), color-stop(100%, #fd1400)) repeat-x, bottom right -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fd1400), color-stop(100%, #fd1400)) no-repeat !important;
+    background: bottom left -webkit-linear-gradient(#fd1400, #fd1400) no-repeat, bottom center -webkit-linear-gradient(#fd1400, #fd1400) repeat-x, bottom right -webkit-linear-gradient(#fd1400, #fd1400) no-repeat !important;
+    background: bottom left -moz-linear-gradient(#fd1400, #fd1400) no-repeat, bottom center -moz-linear-gradient(#fd1400, #fd1400) repeat-x, bottom right -moz-linear-gradient(#fd1400, #fd1400) no-repeat !important;
+    background: bottom left -o-linear-gradient(#fd1400, #fd1400) no-repeat, bottom center -o-linear-gradient(#fd1400, #fd1400) repeat-x, bottom right -o-linear-gradient(#fd1400, #fd1400) no-repeat !important;
+    background: bottom left linear-gradient(#fd1400, #fd1400) no-repeat, bottom center linear-gradient(#fd1400, #fd1400) repeat-x, bottom right linear-gradient(#fd1400, #fd1400) no-repeat !important;
+    -webkit-background-size: 1px 6px, 1px 1px, 1px 6px !important;
+    -moz-background-size: 1px 6px, 1px 1px, 1px 6px !important;
+    -o-background-size: 1px 6px, 1px 1px, 1px 6px !important;
+    background-size: 1px 6px, 1px 1px, 1px 6px !important;
+}
+input.tinyInput { /* If the textbox is small and needs a different padding */
+    padding: 8px 2px 3px !important;
+}

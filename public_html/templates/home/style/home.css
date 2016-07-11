@@ -1,0 +1,156 @@
+#RightColumn {
+    margin-left: 195px;
+}
+
+.Board {
+    background: #fff;
+    -webkit-box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, .32);
+    box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, .32);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    cursor: default;
+    /*
+    padding: 5px 12px 0px 12px;
+    margin-top:20px;*/
+}
+
+/*Rectangular Div With Shadow*/
+.LightButton {
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .32);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .32);
+    cursor: pointer;
+}
+
+.LightButton:hover {
+    /*background: #000;
+    color: #fff;*/
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .42);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .42);
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #ededed 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #ededed)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #ededed 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%, #ededed 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%, #ededed 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%, #ededed 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0); /* IE6-9 */
+}
+
+/* Class Grade Overview Board */
+.ClassBoard {
+    position: relative;
+    width: 635px;
+    height: 90px;
+    background: #fff;
+    -webkit-box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, .32);
+    box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, .32);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    float: left;
+    padding: 5px 12px 0px 12px;
+    margin-top: 20px;
+}
+
+.ClassBoard:first-child {
+    margin-top: 40px;
+}
+
+.ClassName {
+    display: inline-block;
+    font-size: 26px;
+    margin-top: 14px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}
+
+.ClassTeacher {
+    display: inline-block;
+    font-size: 17px;
+    margin-left: 16px;
+}
+
+.ClassScore {
+    display: inline-block;
+    font-size: 48px;
+    float: right;
+    margin-top: -7px;
+}
+
+.PercentageBar {
+    margin-top: 9px;
+    width: 635px;
+    height: 15px;
+    border: 1px solid #c2c2c2;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.PercentageBar div {
+}
+
+.GradeIndicator {
+    width: 1px;
+    height: 15px;
+    background: #cccccc;
+    float: left;
+    margin-left: -2px;
+    position: relative;
+    z-index: 15;
+    -webkit-box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, .5);
+    box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, .5);
+    margin-right: -2px;
+    margin-left: 0px;
+    display: inline-block !important;
+    position: relative !important;
+}
+
+.CurrentGradeIndicator {
+    background: #484848;
+    -webkit-box-shadow: 0px 0px 1px 1px rgba(34, 34, 34, .5);
+    box-shadow: 0px 0px 1px 1px rgba(34, 34, 34, .5);
+    z-index: 20;
+    display: inline-block !important;
+    position: relative !important;
+}
+
+.CurrentGradeIndicator:after {
+    content: "▼";
+    position: relative;
+    top: -21px;
+    left: -2px;
+    font-size: 7px;
+    color: #4e4e4e;
+}
+
+.LetterGradeIndicator:after {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    content: attr(data-letter-grade);
+    position: relative;
+    top: 8px;
+    left: -3px;
+    font-size: 10px;
+}
+
+div.BlueBar {
+    background: #0299cc;
+    height: 15px;
+    -webkit-border-radius: 2px 0px 0px 2px;
+    border-radius: 2px 0px 0px 2px;
+    position: absolute !important;
+
+}
+
+.GreenBar {
+    background: #23c74e;
+    height: 15px;
+    position: relative !important;
+}
+
+div.GreyBar {
+    background: #acacac;
+    height: 15px;
+    position: relative !important;
+}

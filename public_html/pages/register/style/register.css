@@ -1,0 +1,132 @@
+input{
+    -webkit-font-smoothing: antialiased !important;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+#LightBox{
+    position:fixed;
+    top: 0px;
+    left:0px;
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity:0.4;
+    filter:alpha(opacity=40);
+}
+#Spacer{
+    height: 550px;
+}
+#Box{
+    position:absolute;
+    left:50%;
+    z-index: 1000;
+    margin-left:-320px;
+    margin-top: -450px;
+    width: 640px;
+    height: 395px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    background: #fefefe; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fefefe 0%, #dddddd 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fefefe 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fefefe 0%,#dddddd 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fefefe 0%,#dddddd 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fefefe 0%,#dddddd 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+    -webkit-box-shadow:  0px 0px 8px 2px rgba(0, 0, 0, 0.36);
+    box-shadow:  0px 0px 8px 2px rgba(0, 0, 0, 0.36);
+
+}
+#Content{
+    margin: 20px;
+    margin-top: 10px;
+    background-color:transparent !important;
+    padding:0 !important;
+}
+.ContentTitle{
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    color: #656565;
+    text-align:center;
+    font-size: 36px;
+}
+.ContentDescription{
+    margin-top: 5px;
+}
+#RegisterForm{
+    margin-top: -10px;
+}
+.Data{
+    margin-top: 12px;
+}
+#Content tr{
+    height: 40px;
+}
+#Content td{
+    padding-left: 15px;
+}
+.SchoolSelector{
+    border-radius: 3px;
+    border: 1px  solid #acadaf;
+    font-size: 15px;
+}
+input[type="text"], input[type="password"]{
+    position: relative;
+    top: -7px;
+}
+#AgreementCheckbox{
+    margin-top: 17px;
+}
+#AgreementCheckbox span{
+    position:relative;
+    left: 5px;
+}
+.CSSButtons{
+    -webkit-font-smoothing: antialiased !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    color:#ffffff;
+    text-align: center;
+    width: 150px;
+    line-height: 44px;
+}
+#SubmitButton{
+    background: #6DB3F2;
+    -webkit-box-shadow:  0px 0px 0px 1px rgba(30, 105, 222, 1), inset 1px 1px 0px 0px rgba(255, 255, 255, .31);
+    box-shadow:  0px 0px 0px 1px rgba(30, 105, 222, 1), inset 1px 1px 0px 0px rgba(255, 255, 255, .31);
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    margin: 0 auto;
+    margin-top: 25px;
+    cursor:pointer;
+}
+#DoneButton{
+    background: #6DB3F2;
+    -webkit-box-shadow:  0px 0px 0px 1px rgba(30, 105, 222, 1), inset 1px 1px 0px 0px rgba(255, 255, 255, .31);
+    box-shadow:  0px 0px 0px 1px rgba(30, 105, 222, 1), inset 1px 1px 0px 0px rgba(255, 255, 255, .31);
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    margin: 0 auto;
+    margin-top: 15px;
+    cursor:pointer;
+}
+#ErrorMessage{
+    text-align:center;
+    width:100%;
+    font-weight:400;
+    font-size:16px;
+    margin-top:20px;
+    display:none;
+}
+.Data .Text{
+    position:relative;
+    top: -4px;
+}
+.CurrentlyLoading{
+    font-weight: 500;
+}
+.CurrentlyLoading:after{
+    content:'...';
+}

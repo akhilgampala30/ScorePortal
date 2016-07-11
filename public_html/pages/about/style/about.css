@@ -1,0 +1,199 @@
+#wrapperAbout {
+    padding-bottom: 10px;
+    width: 1152px;
+    margin: auto;
+}
+
+/*Content*/
+#Content {
+    margin: 10px auto;
+    position: relative;
+    height: 450px;
+    padding: 0px;
+}
+
+#TopTitleText {
+    margin-left: 190px;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.AvatarNavBar {
+    float: left;
+    text-align: center;
+}
+
+#InfoDisplayWrapper {
+    height: 432px;
+    float: left;
+    margin: 6px;
+}
+
+.Avatar {
+    width: 144px;
+    height: 144px;
+    opacity: 0.6;
+    cursor: pointer;
+    float: left;
+    clear: both;
+    margin: 3px;
+}
+
+#MichaelS {
+    background-image: url('/images/about/MikeShiBacon.png');
+}
+
+#AvatarPicMS {
+    background-image: url('/images/about/PortraitMikeShi.png');
+}
+
+#JackyL {
+    background-image: url('/images/about/JackyLiang.png');
+}
+
+#AvatarPicJL {
+    background-image: url('/images/about/PortraitJackyLiang.png');
+}
+
+#NathanC {
+    background-image: url('/images/about/NathanChou.png');
+}
+
+#AvatarPicNC {
+    background-image: url('/images/about/PortraitNathanChou.png');
+}
+
+#EricS {
+    background-image: url('/images/about/EricShen.png');
+}
+
+#AvatarPicES {
+    background-image: url('/images/about/PortraitEricShen.png');
+}
+
+#DavidW {
+    background-image: url('/images/about/DavidWu.png');
+}
+
+#AvatarPicDW {
+    background-image: url('/images/about/PortraitDavidWu.png');
+}
+
+#NathanW {
+    background-image: url('/images/about/NathanWilliams.png');
+}
+
+#AvatarPicNW {
+    background-image: url('/images/about/PortraitNathanWilliams.png');
+}
+
+#RileyL {
+    background-image: url('/images/about/RileyLewis.png');
+}
+
+#AvatarPicRL {
+    background-image: url('/images/about/PortraitRileyLewis.png');
+}
+
+#Intro {
+    z-index: 0;
+}
+
+[title=Intro] {
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 3em;
+    color: white;
+    opacity: 1;
+    text-shadow: 0px 1px 2px #000000;
+    background-image: url('/images/about/TeamThumb.png');
+}
+
+.InfoDisplay {
+    width: 690px;
+    height: 444px;
+    z-index: -1;
+    position: absolute;
+    top: 3px;
+    background-color: #efefef;
+
+}
+
+#RightNavWrapper {
+    float: right;
+}
+
+.AvatarPic {
+    width: 220px;
+    height: 356px;
+    float: left;
+    margin: 0px 6px 0px 0px;
+}
+
+.AvatarDesc {
+    width: 442px;
+    float: left;
+    margin-left: 3px;
+    padding: 8px;
+    background-color: #f4f4f4;
+}
+
+#AvatarPicIntro {
+    background-image: url('/images/about/TeamLarge.png');
+    width: 667px;
+    height: 444px;
+    float: left;
+    margin-left: 12px;
+
+}
+
+.DescTitle {
+    font-size: 2em;
+    text-align: left;
+}
+
+.DescSubTitle {
+    font-size: 1.4em;
+    text-align: right;
+}
+
+#IntroSubTextContainer {
+    background-color: #000000;
+    opacity: 0.6;
+    width: 666px;
+    height: 45px;
+    z-index: 1;
+    position: absolute;
+    margin-left: 13px;
+    top: 350px;
+}
+
+#IntroSubText {
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 2em;
+    color: #ffffff;
+    position: absolute;
+    z-index: 2;
+    text-shadow: 0px 1px 2px #000000;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 13px;
+    top: 347px;
+    width: 666px;
+    height: 40px;
+}
+
+#TeamIntro {
+    background-color: #f4f4f4;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.TwoColumns {
+    -moz-column-count: 2; /* Firefox */
+    -webkit-column-count: 2; /* Safari and Chrome */
+    column-count: 2;
+    margin: 0px;
+    font-size: 1.1em;
+}

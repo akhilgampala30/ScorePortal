@@ -1,0 +1,51 @@
+#LeftNavBar{
+    width: 195px;
+    height: 100%;
+    position:fixed;
+    background: #2c323f;
+    -webkit-box-shadow: inset -1px 1px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset -1px 1px 10px 0px rgba(0, 0, 0, 0.75);
+    z-index: 50;
+    text-overflow:ellipsis;
+}
+.class{
+    position: relative;
+    font-size: 18px;
+    height:45px;
+    width: 188px;
+    color:white;
+    font-weight: 300;
+    line-height:45px;
+    padding-left: 7px;
+    cursor:pointer;
+    text-overflow:ellipsis;
+    overflow:hidden ;
+    white-space:nowrap;
+}
+.class:hover{
+    font-weight: 400;
+    text-shadow: 0 0 1px rgba(0,0,0,0.3);
+}
+.selectedclass{
+    font-weight: 400;
+    background: #5b606b;
+    height:30px;
+    width: 191px;
+    line-height: 30px;
+    margin-top: 7px;
+    margin-bottom: 8px;
+    -webkit-box-shadow:  0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow:  0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+#LeftNavBarFooter{
+    position:fixed;
+    bottom: 5px;
+    font-size: 12.5px;
+    text-align:center;
+    width: 195px;
+    color: #5D5D5D;
+}
+#LeftNavBarFooter a{
+    text-decoration: none;
+    color:#aeaeae;
+}

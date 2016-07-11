@@ -1,0 +1,80 @@
+#wrapper{
+    width:660px;
+    margin: 0 auto;
+}
+#ClassNav{
+    width: 660px;
+    height: 45px;
+    float:left;
+    margin-top: 16px;
+}
+.ClassNavButton{
+    width: 220px;
+    height: 40px;
+    line-height: 45px;
+    text-align:center;
+    font-size: 17px;
+    display:inline-block;
+    cursor:pointer;
+}
+#ClassNav div:hover{
+    border-bottom: 5px solid #00bfff;
+}
+.SelectedClassNavButton{
+    border-bottom: 5px solid #0099cc;
+}
+#OriginalGradesNavButton{
+    -webkit-border-radius: 0px 0px 0px 5px;
+    border-radius: 0px 0px 0px 5px;
+}
+#EditGradesNavButton{
+    margin-left: -4px;
+}
+#ClassInformationNavButton{
+    -webkit-border-radius: 0px 0px 5px 0px;
+    border-radius: 0px 0px 5px 0px;
+    margin-left: -4px;
+}
+#ClassContent{
+    width: 660px;
+    float:left;
+}
+
+#LightBox {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+#LightBoxContent {
+    left: 50%;
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;
+    width: 440px;
+    margin: 10% auto;
+    -webkit-border-radius: 3px;
+    border-radius: 12px;
+    background: #fefefe; /* Old browsers */
+    background: -moz-linear-gradient(top, #fefefe 0%, #dddddd 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #dddddd)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fefefe 0%, #dddddd 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fefefe 0%, #dddddd 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #fefefe 0%, #dddddd 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #fefefe 0%, #dddddd 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#dddddd', GradientType=0); /* IE6-9 */
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.36);
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.36);
+    opacity: 1;
+    cursor: default;
+}
+
+#ComingSoon {
+    font-size: 1.5em;
+    margin: 0px auto;
+}

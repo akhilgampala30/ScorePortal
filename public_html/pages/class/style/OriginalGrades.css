@@ -1,0 +1,615 @@
+.BoardTitle{
+    width: 635px;
+    border-bottom: 1px solid #b5b5b5;
+    margin: 0 auto;
+    font-size: 19px;
+    padding: 7px 0px 5px 5px;
+}
+#GradeProgress{
+    margin-top: 15px;
+    height: 330px;
+    width: 660px;
+    position:relative;
+}
+#GradeProgressHeader{
+}
+#GradeProgressChart{
+    height: 280px;
+    width: 645px;
+    margin: 0 7px 0 7px;
+}
+#tooltip{
+    font-size: 14px;
+    opacity: 0.7;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
+    padding: 3px;
+    font-weight: 400;
+}
+#legendholder{
+    position: absolute;
+    right: 25px;
+    top: 45px;
+}
+.LegendItem{
+    cursor:pointer;
+}
+#CategoryBreakdown{
+    margin-top: 15px;
+    /*height: 235px;*/
+    padding-bottom: 10px;
+}
+#GradeCompositionChartTitle{
+    width: 124px;
+    font-size: 13px;
+    text-align: center;
+    position: relative;
+    top: 104px;
+    left: 69px;
+    margin-bottom: -29px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+#GradeCompositionChart{
+    width: 240px;
+    height: 230px;
+    float:left;
+    margin-left: 10px;
+}
+.PieChartLabel{
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    /*
+    font-weight: 400;*/
+}
+.PieChartCategoryLabel{
+    background: rgba(255, 255, 255, .5);
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
+    /*
+    max-width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;*/
+    opacity:0;
+    position:relative;
+    padding: 5px;
+    border-radius: 2px;
+    z-index: 15;
+
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(241,241,241,1)), color-stop(51%,rgba(225,225,225,1)), color-stop(100%,rgba(246,246,246,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Bar Chart ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#CategoryGradeChart{
+    width: 410px;
+    /*height: 200px;*/
+    float:right;
+}
+#CategoryGradeChartTable{
+    width: 410px;
+    /*height: 180px;*/
+}
+#CategoryGradeChartTitle{
+    width: 310px;
+    padding-top: 5px;
+    margin-right: 10px;
+    height: 20px;
+    font-size: 12.5px;
+    float:right;
+    border-bottom: 1px solid #b5b5b5;
+}
+#CategoryGradeChartTable td{
+	padding-top: 5px;
+    white-space: nowrap;
+}
+#CategoryGradeChartTable tr:first-child td{ /*no extra padding on first row*/
+	padding-top: 0px;
+}
+.CategoryGradeProgressBarName{
+    text-align:right;
+    text-overflow:ellipsis;
+    width: 80px;
+    white-space:nowrap;
+    overflow: hidden;
+}
+.CategoryGradeProgressBarHolder{
+    width: 360px;
+}
+.CategoryGradeProgressBar{
+    height: 19px;
+    /*background: #5b9bd5;*/
+    display:inline-block;
+    text-align:center;
+    color: #fff;
+    padding-bottom: 3px;
+}
+.CategoryGradeProgressBarLabel{
+    padding-left: 5px;
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Add Assignments Board ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#AddAssignment{
+    margin-top: 15px;
+    height: 110px;
+    position:relative;
+}
+#AddAssignmentBar{
+    border-bottom: 1px solid #b5b5b5;
+    height: 30px;
+    margin: 0 10px 0 10px;
+    color: #3572be;
+    font-size: 15px;
+    line-height: 30px;
+}
+#AddAssignmentCategoryHeader{
+    margin-left: 28px;
+    width: 98px;
+    display:inline-block;
+}
+#AddAssignmentNameHeader{
+    width: 350px;
+    display:inline-block;
+}
+#AddAssignmentScoreHeader{
+    width: 130px;
+    display:inline-block;
+}
+#AddAssignmentForm{
+    margin-left: 10px;
+    margin-top:2px;
+    font-size: 15px;
+}
+.AddAssignmentCategorySelect{
+    margin-left: 5px;
+    position:relative;
+    border-radius: 3px;
+    border: 1px  solid #acadaf;
+    width: 115px;
+}
+.AddAssignmentName{
+    width: 345px;
+    font-weight: 300;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 15px;
+}
+.AddAssignmentPoints{
+    width: 50px;
+    font-size: 15px;
+}
+.AddButton{
+    font-size: 24px;
+    color: #adadad;
+    cursor:pointer;
+    float:right;
+    line-height: 30px;
+    margin-right: 14px;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+.AddButton:Before{
+    position:relative;
+    top: -4px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Assignments Board ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#Assignments{
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+#ResetAllAssignments{
+    display: inline-block;
+    color: #7e7e7e;
+    margin-right: 2px;
+    margin-top: 7px;
+    font-size: 13px;
+    float: right;
+    cursor:pointer;
+}
+#ResetAllAssignments .fa{
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-size: 11px;
+    margin-right: 4px;
+    position: relative;
+    top: -1px;
+}
+#AssignmentLegend{
+    float:right;
+}
+.AssignmentLegendLabel{
+    font-size: 11px;
+    display: inline-block;
+    position:relative;
+    top: -6px;
+}
+.AssignmentLegendColor{
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin-top: 5px;
+}
+#NewlyUpdatedColor{
+    background: #baff9c;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~ Assignments Sort Bar ~~~~~~~~~~~~~~~~~~~*/
+#AssignmentsSortBar{
+    border-bottom: 1px solid #b5b5b5;
+    height: 30px;
+    margin: 0 10px 0 10px;
+}
+.SortItem{
+    color: #3572be;
+    display:inline-block;
+    font-size: 15px;
+}
+#CategorySortItem{
+    width: 98px;
+    margin-left: 28px;
+    cursor:pointer;
+}
+#AssignmentNameSortItem{
+    width: 233px;
+    cursor:pointer;
+}
+#UpdatedDateSortItem{
+    width: 100px;
+    margin-left: 5px;
+    cursor:pointer;
+}
+#AssignmentScoreSortContainer{
+    display:inline-block;
+    height: 20px;
+    width: 130px;
+}
+#AssignmentScoreSortTitle{
+    text-align:center;
+    font-size: 9px;
+}
+#AssignmentScoreSortLowerRow{
+    margin: 0 auto;
+    margin-top: -8px;
+
+}
+#PointScoreSortItem{
+    font-size: 11px;
+    cursor:pointer;
+}
+#PercentageSortItem{
+    font-size: 11px;
+    cursor:pointer;
+}
+#AssignmentScoreSortDivider{
+    font-size: 11px;
+    display:inline-block;
+}
+
+#AssignmentListContainer{
+    position:relative;
+}
+
+/* Assignment Items and Inside Elements */
+.AssignmentItem{
+    width: 635px;
+    float:right;
+    margin-right: 7px;
+    padding-left: 5px;
+    border-bottom: 1px solid #d1d1d1;
+    position:relative;
+}
+.AssignmentBarColor{
+    opacity: 0.8;
+    position:absolute;
+    top:0px;
+    left:-13px;
+    width: 660px;
+    height: 40px;
+}
+.DisabledAssignment{
+    opacity: 0.6;
+}
+.AssignmentOverview div{
+    position:relative;
+    z-index: 2;
+    display:inline-block;
+    font-size: 16.5px;
+    line-height: 35px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    cursor:pointer;
+}
+.BookmarkButton{
+    width: 16px;
+    height: 21px;
+    margin: 0px 3px 0 3px;
+    position:relative;
+    top: -6px;
+    left: -5px;
+    background-image: url('/images/icons/BookmarkIcon.png');
+    background-position: 0 -21px;
+}
+.BookmarkButton:hover{
+    background-position: 0 0px;
+}
+.Bookmarked{
+    background-position: 0 0px;
+}
+.AssignmentCategory{
+    width: 95px;
+    margin-left: -4px;
+    margin-right: 5px;
+}
+.AssignmentName{
+    width: 220px;
+    margin-left: -4px;
+}
+.AssignmentPointScore{
+    width: 70px;
+    text-align:right;
+    margin-left: -4px;
+}
+.AssignmentScoreDivider{
+}
+.AssignmentPercentageScore{
+    width: 70px;
+    margin-left: 3px;
+}
+.AssignmentUpdatedDate{
+    width: 95px;
+    margin-left: -4px;
+}
+.AssignmentShareButton{
+    width: 25px;
+    height: 35px;
+    background-image: url('/images/icons/BlueShareThis.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.AssignmentShareButton:active{
+    width: 23px;
+    height: 33px;
+    margin-left: 1px;
+    margin-top: 1px;
+    background-image: url('/images/icons/BlueShareThis.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.AssignmentDetailContainer{
+    height: 105px;
+    display:none;
+}
+
+/* Left Panel of the Assignments Drop Down */
+.AssignmentDetailLeft{
+    width: 260px;
+    height: 100px;
+    margin-left: 25px;
+    border-right: 1px #c8c8c8 solid;
+    float:left;
+}
+.OverallGradeImprovement{
+    margin-top: -4px;
+}
+.CategoryGradeImprovement{
+    margin-top: 0px;
+}
+.OverallGradeImprovementPercent{
+    color: #29d429;
+    font-weight: 400;
+}
+.CategoryGradeImprovementPercent{
+    color: #008300;
+    font-weight: 400;
+}
+
+/*Edit Box*/
+.EditBox{
+    position:relative;
+    left: 21px;
+    top: 0px;
+    background: #ececec;
+    border: solid 1px #d1d1d1;
+    border-radius: 2px;
+    padding: 5px;
+    width: 267px;
+    height: 85px;
+    cursor:auto;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.EditBoxUpper{
+    position:relative;
+    top: -7px;
+}
+.EditBoxLabel{
+    position:relative;
+    top: 7px;
+    color: #727272;
+    font-weight: 400;
+}
+.EditBoxCategorySelect{
+    position:relative;
+    top: 5px;
+    left: -5px;
+    float:right;
+    border-radius: 3px;
+    border: 1px  solid #acadaf;
+    font-size: 15px;
+}
+.EditBoxLower{
+    position:relative;
+    top: -9px;
+}
+.AssignmentEarnedPointsInput{
+    width: 35px;
+    font-size: 17px;
+    color: #575757;
+}
+.AssignmentPossiblePointsInput{
+    width: 35px;
+    font-size: 17px;
+    color: #575757;
+}
+.EditBoxLower input{
+    height: 24px;
+}
+.EditBoxButtons{
+    position:relative;
+    top: 5px;
+    background:white;
+    display:inline-block;
+    width: 35px;
+    height: 25px;
+    margin-right: 3px;
+    margin-top: 7px;
+    -webkit-box-shadow:  0px 0px 2px 1px rgba(0, 0, 0, .3);
+    box-shadow:  0px 0px 2px 1px rgba(0, 0, 0, .3);
+}
+.SaveAssignment{
+    background: url("/images/icons/SaveIcon.png") no-repeat center;
+    cursor:pointer;
+    margin-left: 4px;
+}
+.ResetAssignment{
+    background: url("/images/icons/ResetIcon.png") no-repeat center;
+    cursor:pointer;
+}
+.DisableAssignment{
+    background: url("/images/icons/HideIcon.png") no-repeat center;
+    cursor:pointer;
+}
+.DeleteAssignment{
+    background: url("/images/icons/DeleteIcon.png") no-repeat center;
+    cursor:pointer;
+}
+.EditTitle{
+    position: relative;
+    top: -7px;
+}
+.AssignmentTitleInput{
+    font-size: 17px;
+    width: 260px;
+    color: #575757;
+}
+
+/* Right Panel of The Assignments Drop Down */
+.AssignmentDetailRight{
+    width: 310px;
+    margin-right: 25px;
+    float:right;
+}
+
+/* Normal Distribution Graph _/\_*/
+.NormalDistributionChart{
+    margin:0 auto;
+    width: 205px;
+    margin-top: -5px;
+}
+.NormalDistributionGraphBackground{
+    position:relative;
+    background-image:url('/images/icons/NormalDistributionGraph.png');
+    width: 205px;
+    height: 95px;
+}
+.NormalDistributionGraphOverlay{
+    position:absolute;
+    top:0;left:0;
+    background:url('/images/icons/NormalDistributionGraph.png') no-repeat;
+    background-position: 0px -95px;
+    width: 150px;
+    height: 95px;
+    display:inline-block;
+}
+.NormalDistributionAverageIndicator{
+    position:absolute;
+    top:0;    left: 102px;
+    width: 3px;
+    height: 93px;
+    background: #ffa54e;
+    display:inline-block;
+    margin-right: -6px;
+    margin-bottom: 1px;
+    z-index:3;
+}
+.PopulationData{
+    position: absolute;
+    top: 73px;
+    left: -63px;
+    font-size: 12px;
+    width: 100%;
+    color: #40454b;
+    z-index: 5;
+}
+.PercentileInClassLabel{
+    width: 120px;
+    position:relative;
+    margin-bottom: -60px;
+    position:relative;
+    top: 20px;
+    left: -50px;
+    text-align: center;
+}
+.PercentileInClassIndicator{
+    background:url('/images/icons/NormalDistributionGraphLabels.png') no-repeat;
+    background-position: -34px 0;
+    width: 26px;
+    height: 30px;
+    margin-left: 60px;
+    margin-top: 7px;
+}
+.PercentileInClassLabelTitle{
+    font-size: 14px;
+    color: #8fbaf4;
+}
+.PercentileInClassLabelData{
+    font-size: 12px;
+}
+.ClassAveragePercentileLabel{
+    width: 100px;
+    font-size: 14px;
+    position:relative;
+    margin-bottom: -60px;
+    position:relative;
+    left: 90px;
+    top: -14px;
+    padding-left: 35px;
+    text-align:right;
+}
+.ClassAverageIndicator{
+    background:url('/images/icons/NormalDistributionGraphLabels.png') no-repeat;
+    width: 34px;
+    height: 20px;
+    margin-left: -25px;
+}
+.ClassAveragePercentileLabelTitle{
+    font-size: 14px;
+    color: #ffa54e;
+}
+.ClassAveragePercentileLabelData{
+    font-size: 12px;
+    margin-left: 14px;
+    white-space: nowrap; /* Prevent overflowing text from automatically new lining*/
+}

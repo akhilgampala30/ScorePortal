@@ -1,0 +1,21 @@
+#header
+{
+    height: 65px;
+    border-bottom: 1px solid #dfdfdf;
+    background:#ffffff;
+    position:fixed;
+    width: 100%;
+    z-index: 100;
+}
+#logo
+{
+    background-image:url('/images/Logo.png');
+    width: 250px;
+    height: 40px;
+    position:relative;
+    top: 9px;
+    left: 15px;
+}
+#HeaderFiller{
+    height: 65px;
+}

@@ -1,0 +1,73 @@
+#Don't forget to uncomment PHP 5.4 and HTTPS lines when uploading!
+
+<IfModule mod_suphp.c>
+    suPHP_ConfigPath /home/username/www
+    <Files php.ini>
+        order allow,deny
+        deny from all
+    </Files>
+</IfModule>
+
+ErrorDocument 404 /error
+
+<Limit GET POST PUT>
+ order allow,deny
+ allow from all
+</Limit>
+
+Options -Indexes
+
+# Use PHP 5.4
+#AddType application/x-httpd-php54 .php
+
+<ifmodule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript image/jpeg image/png
+</ifmodule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 7 days"
+    ExpiresByType image/png "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+    ExpiresByType text/css "access plus 7 days"
+</IfModule>
+
+RewriteEngine On
+
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+#Pull Grades From Powerschool
+RewriteRule     ^PullGrades     /pages/home/controller/PullGrades.php    [NC,L]
+
+#Pull Grades From Powerschool
+RewriteRule     ^UnlinkUser    /pages/settings/controller/UnlinkUser.php    [NC,L]
+
+#Logout/Clear Sesh
+RewriteRule     ^Logout     /include/UserSessionState/Logout.php    [NC,L]
+
+#Updating Scores
+RewriteRule     ^UpdateScore/(\d*\.?\d+)/(\d*\.?\d+)/(\d+)/?$    /pages/class/controller/UpdateScore.php?AssignmentEarnedPoints=$1&AssignmentPossiblePoints=$2&idAssignmentScore=$3    [NC,L]
+RewriteRule     ^UpdateScore/(\d*\.?\d+)/(\d*\.?\d+)/(\d+)/(\d+)/(([a-zA-Z0-9]|\s)+)/(\d)/?$    /pages/class/controller/UpdateScore.php?AssignmentEarnedPoints=$1&AssignmentPossiblePoints=$2&idAssignmentScore=$3&CategoryID=$4&AssignmentName=$5&modCategory=$6    [NC,L]
+
+#Updating Bookmarks/Disabling Assignments
+RewriteRule     ^UpdateBookmark/(\d+)/(\d)/(\d)/?$      /pages/class/controller/UpdateBookmark.php?AssignmentID=$1&AssignmentBookmarked=$2&Added=$3    [NC,L]
+RewriteRule     ^DisableAssignment/(\d+)/(\d)/(\d)/?$      /pages/class/controller/DisableAssignment.php?AssignmentID=$1&AssignmentDisabled=$2&Added=$3    [NC,L]
+RewriteRule     ^ResetAssignment/(\d+)/?$      /pages/class/controller/ResetAssignment.php?AssignmentID=$1    [NC,L]
+RewriteRule     ^DeleteAssignment/(\d+)/?$      /pages/class/controller/DeleteAssignment.php?AssignmentID=$1    [NC,L]
+RewriteRule     ^RemoveAllModifiedAssignments/(\d+)/?$      /pages/class/controller/RemoveAllModifiedAssignments.php?ClassID=$1    [NC,L]
+
+RewriteRule     ^AddAssignment/(\d*\.?\d+)/(\d*\.?\d+)/(\d)/(\d+)/(\d+)/(([a-zA-Z0-9]|\s)+)/?$      /pages/class/controller/AddAssignment.php?AssignmentEarnedPoints=$1&AssignmentPossiblePoints=$2&modCategory=$3&idCategory=$4&idClass=$5&AssignmentName=$6    [NC,L]
+
+RewriteRule     ^Class/a/(\d)/(\d+)/?$     /pages/class/class.php?NavLoad=$1&id=$2    [NC,L]
+
+#Rewrites for loading pages through AJAX
+RewriteRule     ^Grades/o/(\d)/(\d+)/?$     /pages/class/OriginalGrades.php?load=$1&id=$2    [NC,L]
+RewriteRule     ^Grades/e/(\d)/(\d+)/?$     /pages/class/EditedGrades.php?load=$1&id=$2    [NC,L]
+
+#Login Script
+RewriteRule    ^Login/?$    /include/UserSessionState/UserLoginInit.php    [PT,NC,L]
+
+#General Pages
+RewriteRule     ^([A-Za-z-]+)/?$    index.php?page=$1    [NC,L]
+RewriteRule    ^([A-Za-z-]+)/([A-Za-z0-9-]+)/?$    index.php?page=$1&id=$2    [NC,L]

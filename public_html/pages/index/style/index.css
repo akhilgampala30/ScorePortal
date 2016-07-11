@@ -1,0 +1,303 @@
+#wrapper {
+    height: 855px;
+}
+
+#TopWelcomeBanner {
+    width: 1152px;
+    height: 380px;
+    background-image: url('/images/BlurredHomeBannerBackground.png');
+    position: relative;
+}
+
+.TopWelcomeBannerStrip {
+    background-color: #000;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    height: 75px;
+}
+
+#TopWelcomeStrip {
+    width: 1152px;
+    height: 139px;
+    position: relative;
+    top: 48px;
+}
+
+#TopWelcomeStripTextTitle {
+    -webkit-font-smoothing: antialiased !important;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0px 1px 2px #000000;
+    filter: dropshadow(color=#000000, offx=0, offy=1);
+    position: absolute;
+}
+
+#TopWelcomeStripTextDescription {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: white;
+    position: absolute;
+    line-height: 31px;
+}
+
+#TopWelcomeStripTitle {
+    position: relative;
+    top: -85px;
+}
+
+#TopWelcomeStripDescription {
+    position: relative;
+    top: -25px;
+    width: 685px;
+}
+
+#TopWelcomeStripTextContainer {
+    margin-left: 40px;
+}
+
+/*Text Box*/
+#TopWelcomeStripWatchVideo {
+    position: absolute;
+    top: 210px;
+    width: 480px;
+    height: 75px;
+    line-height: 75px;
+}
+
+/*Dark Box*/
+#TopWelcomeWatchVideoStrip {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+}
+
+#TopWelcomeStripWatchVideoText {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 29px;
+    color: white;
+    position: relative;
+    top: -2px;
+    left: -85px;
+    float: right;
+}
+
+#TopWelcomeStripWatchVideoPlayButton {
+    display: inline-block;
+    background-image: url('/images/icons/PlayButton.png');
+    width: 54px;
+    height: 54px;
+    position: relative;
+    left: 150px;
+    top: 10px;
+    float: right;
+}
+
+#TopWelcomeStripDemo {
+    float: right;
+    width: 480px;
+    height: 75px;
+    position: absolute;
+    top: 260px;
+    right: 0;
+    line-height: 75px;
+}
+
+#TopWelcomeStripDemoText {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 29px;
+    font-weight: 300;
+    color: white;
+    margin-left: 35px;
+    position: relative;
+}
+
+/* Dark Box */
+#TopWelcomeDemoStrip {
+    width: 100%;
+    float: right;
+    position: absolute;
+}
+
+#TopWelcomeStripDemoInformationButton {
+    background-image: url('/images/icons/InformationButton.png');
+    width: 54px;
+    height: 54px;
+    position: relative;
+    top: 12px;
+    left: 20px;
+    float: left;
+}
+
+/*Left Column Stuff*/
+
+#LeftColumn {
+    float: left;
+    margin-left: 40px;
+    width: 750px;
+}
+
+#FeaturesList {
+    margin-top: 35px;
+}
+
+#FeaturesList tr {
+    height: 47px;
+}
+
+#FeaturesList .Text {
+    padding-bottom: 10px;
+    padding-left: 12px;
+    width: 650px;
+}
+
+#FeaturesList .Title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 21px;
+    color: #282828;
+}
+
+#FeaturesList .Description {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 21px;
+    color: #5b5b5b;
+}
+
+#DemoLink {
+    font-size: 19px;
+    margin-top: 15px;
+}
+
+/*Right Column Stuff*/
+
+#RightColumn {
+    float: right;
+    width: 340px;
+}
+
+#RightColumnTitle {
+    margin: 0 auto;
+    width: 270px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased !important;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 33px;
+    color: #282828;
+    text-shadow: 0px 0px 2px #d8d8d8;
+    filter: dropshadow(color=#d8d8d8, offx=0, offy=0);
+    margin-top: 35px;
+}
+
+/*Connect Buttons*/
+#ConnectButtonsContainer {
+    margin-top: 35px;
+}
+
+.ConnectButtons {
+    width: 330px;
+    height: 55px;
+    margin: 0 auto;
+    margin-top: -10px;
+}
+
+.ConnectButtonLogo {
+    position: relative;
+    top: 1px;
+    width: 52px;
+    height: 54px;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.ConnectButtonText {
+    -webkit-font-smoothing: antialiased !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+    float: right;
+    text-align: center;
+    width: 275px;
+    line-height: 54px;
+    position: relative;
+    left: -15px;
+}
+
+.ConnectButtonText .ConnectServiceName {
+    font-family: 'Helvetica Neue Bold', sans-serif;
+    font-size: 22px;
+}
+
+#GoogleConnectButton {
+    background: #d94936;
+    -webkit-box-shadow: 0px 0px 0px 1px rgba(176, 40, 26, 1), inset 1px 1px 0px 0px rgba(255, 255, 255, .31);
+    box-shadow: 0px 0px 0px 1px rgba(176, 40, 26, 1), inset 1px 1px 0px 0px rgba(255, 255, 255, .31);
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+}
+
+#GoogleConnectButton:hover {
+    background: #ff4c36;
+}
+
+#GoogleConnectButton .ConnectButtonLogo {
+    background-image: url('/images/logos/GoogleMiniLogo.png');
+    border-right: 2px solid #d65645;
+}
+
+#YahooConnectButton {
+    background: #6e329d;
+    -webkit-box-shadow: 0px 0px 0px 1px rgba(87, 11, 93, 1), inset 1px 1px 0px 0px rgba(255, 255, 255, .31);
+    box-shadow: 0px 0px 0px 1px rgba(87, 11, 93, 1), inset 1px 1px 0px 0px rgba(255, 255, 255, .31);
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+}
+
+#YahooConnectButton:hover {
+    background: #7f33af;
+}
+
+#YahooConnectButton .ConnectButtonLogo {
+    background-image: url('/images/logos/YahooMiniLogo.png');
+    border-right: 2px solid #7b44a5;
+}
+
+/*Facebook Elements*/
+.fb-like {
+    margin-top: 17px;
+    margin-left: 10px;
+}
+
+.fb-facepile {
+    margin-left: 10px;
+    margin-top: 3px;
+    width: 300px;
+}
+
+.doge-widget-pay{
+    width:120px !important;
+    height: 29px !important;
+    overflow: visible !important;
+}
+.doge-widget-icon{
+    width: 20px !important;
+    height:20px !important;
+    left: 5px !important;
+    top: 4px !important;
+}
+.doge-widget-pay-link{
+    top: -1px !important;
+    left: 25px !important;
+}
+.doge-widget-text{
+}
+.doge-widget-site-link{
+    position: relative !important;
+    left: 24px !important;
+    top: -2px !important;
+}

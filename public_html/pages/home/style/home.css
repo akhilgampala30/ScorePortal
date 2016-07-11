@@ -1,0 +1,20 @@
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
+#wrapper{
+    width:660px;
+    margin: 0 auto;
+}
+.notification{
+    position:absolute;
+    top:0;
+    left:0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 5px;
+    height: 95px;
+
+    background: #0092C4; /* Old browsers */
+
+}

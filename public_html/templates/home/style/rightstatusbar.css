@@ -1,0 +1,17 @@
+#RightStatusBar {
+    float: right;
+    width: 247px;
+}
+
+#QuickStats {
+    margin-top: 20px;
+}
+
+#NotificationDock {
+    margin-top: 20px;
+}
+
+#AdsBar {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}

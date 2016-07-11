@@ -1,0 +1,8 @@
+#eclipse
+.settings
+.buildpath
+.project
+
+/nbproject/private/
+
+.sonar
