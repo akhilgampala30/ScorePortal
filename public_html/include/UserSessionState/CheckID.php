@@ -27,8 +27,7 @@ $UserID = null;
 
 if(!isset($ServiceID) || !isset($UserFirstName) || !isset($UserLastName) || !isset($UserEmail)){ //If Invalid Request, Go back to root
     //header('Location: ' . '/');
-    echo '/';
-    die();
+    die('/');
 }
 
 switch($ServiceID){
@@ -69,8 +68,7 @@ switch($ServiceID){
                 $Validate = true;
             }
         } else {
-            echo '/';
-            exit;
+            die('/');
         }
 
         break;
@@ -85,8 +83,7 @@ if($Validate){
         //User Not Found, Create a new User
         $_SESSION['LoginID'] = $LoginID;
         //header('Location: /register');
-        echo '/register';
-        exit;
+        die('/register');
     }
     $_SESSION['UserID'] = $UserID; //Set User ID To Sesh
     require 'UserLoginInit.php';

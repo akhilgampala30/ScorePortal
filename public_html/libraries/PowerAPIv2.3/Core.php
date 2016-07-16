@@ -103,15 +103,16 @@ class Core {
 		preg_match('/<input type="hidden" name="pstoken" value="(.*?)" \/>/s', $html, $pstoken);
 		$data['pstoken'] = $pstoken[1];
 		
-		preg_match('/<input type="hidden" name="contextData" value="(.*?)" \/>/s', $html, $contextData);
+		preg_match('/<input type="hidden" name="contextData" id="contextData" value="(.*?)" \/>/s', $html, $contextData);
+		//print_r($contextData);
 		$data['contextData'] = $contextData[1];
-		
+
 		if (!strpos($html, "<input type=hidden name=ldappassword value=''>")) {
 			$data['ldap'] = false;
 		} else {
 			$data['ldap'] = true;
 		}
-		
+
 		return $data;
 	}
 	
@@ -140,6 +141,8 @@ class Core {
 		
 		$result = $this->_request('guardian/home.html', $fields);
 		
+		//print_r($result);
+
 		if (!strpos($result, 'Grades and Attendance')) {			// This should show up instantly after login
 			preg_match('/<div class="feedback-alert">(.*?)<\/div>/s', $result, $pserror); // Pearson tell us what's wrong! We should listen to that.
 			if (!isset($pserror[1])) { // Well, okay, sometimes they don't
