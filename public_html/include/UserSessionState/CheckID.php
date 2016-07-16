@@ -12,21 +12,22 @@ require $path['Database.php'];
 require $path['OpenID.php'];
 
 $dbConnection = connect();
-if(!isset($_GET['ServiceID'])){
+if(!isset($_POST['ServiceID'])){
     die("No Service ID Set");
 }
 
-$ServiceID = $_GET['ServiceID'];
-$UserFirstName = $_GET['FirstName'];
-$UserLastName = $_GET['LastName'];
-$UserEmail = $_GET['Email'];
+$ServiceID = $_POST['ServiceID'];
+$UserFirstName = $_POST['FirstName'];
+$UserLastName = $_POST['LastName'];
+$UserEmail = $_POST['Email'];
 
 $_SESSION['ServiceID'] = $ServiceID;
 $Validate = false;
 $UserID = null;
 
 if(!isset($ServiceID) || !isset($UserFirstName) || !isset($UserLastName) || !isset($UserEmail)){ //If Invalid Request, Go back to root
-    header('Location: ' . '/');
+    //header('Location: ' . '/');
+    echo '/';
     die();
 }
 
@@ -54,15 +55,22 @@ switch($ServiceID){
         else{header('Location: ' . $openid->authUrl());die();} //Redirect to OpenID page.
         */
         
-        $LoginID = $_GET['LoginID'];
+        $LoginID = $_POST['LoginID'];
         if($LoginID!=null) {
             $_SESSION['AuthUserFirstName'] = $UserFirstName;
             $_SESSION['AuthUserLastName'] = $UserLastName;
             $_SESSION['AuthUserEmail'] = $UserEmail;
             $_SESSION['LoginID'] = $LoginID;
-            $Validate = true;
+
+            // validate google id token
+            $JSONResponse = json_decode(file_get_contents("https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=".$LoginID));
+
+            if(isset($JSONResponse->{'aud'})) {
+                $Validate = true;
+            }
         } else {
-            $Validate = false;
+            echo '/';
+            exit;
         }
 
         break;
@@ -76,7 +84,8 @@ if($Validate){
     if($UserID==null){
         //User Not Found, Create a new User
         $_SESSION['LoginID'] = $LoginID;
-        header('Location: /register');
+        //header('Location: /register');
+        echo '/register';
         exit;
     }
     $_SESSION['UserID'] = $UserID; //Set User ID To Sesh

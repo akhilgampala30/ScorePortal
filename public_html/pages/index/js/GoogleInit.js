@@ -3,12 +3,25 @@ function onSuccess(googleUser) {
 	/*console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
 	console.log('Name: ' + profile.getName());
 	console.log('Image URL: ' + profile.getImageUrl());
-	console.log('Email: ' + profile.getEmail());*/
+	console.log('Email: ' + profile.getEmail());
 	document.location.href = '/include/UserSessionState/CheckID.php?ServiceID=0&LoginID='
-		+ profile.getId()
+		+ googleUser.getAuthResponse().id_token
 		+ '&FirstName=' + profile.getGivenName()
 		+ '&LastName=' + profile.getFamilyName()
-		+ '&Email=' + profile.getEmail();
+		+ '&Email=' + profile.getEmail();*/
+
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', '/include/UserSessionState/CheckID.php');
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.onload = function() {
+		document.location.href = xhr.responseText;
+		//console.log("Login Post Done: "+xhr.responseText);
+	};
+	xhr.send('ServiceID=0&LoginID='
+		+ googleUser.getAuthResponse().id_token
+		+ '&FirstName=' + profile.getGivenName()
+		+ '&LastName=' + profile.getFamilyName()
+		+ '&Email=' + profile.getEmail());
 }
 
 function onFailure(error) {
