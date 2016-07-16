@@ -17,11 +17,15 @@ if(!isset($_GET['ServiceID'])){
 }
 
 $ServiceID = $_GET['ServiceID'];
+$UserFirstName = $_GET['FirstName'];
+$UserLastName = $_GET['LastName'];
+$UserEmail = $_GET['Email'];
+
 $_SESSION['ServiceID'] = $ServiceID;
 $Validate = false;
 $UserID = null;
 
-if(!isset($ServiceID)){ //If Invalid Request, Go back to root
+if(!isset($ServiceID) || !isset($UserFirstName) || !isset($UserLastName) || !isset($UserEmail)){ //If Invalid Request, Go back to root
     header('Location: ' . '/');
     die();
 }
@@ -29,8 +33,8 @@ if(!isset($ServiceID)){ //If Invalid Request, Go back to root
 switch($ServiceID){
     case 0:
         //If Google OpenID
-        /*$LoginServiceType = GetLoginServiceTypeByTechnology(0, $dbConnection);
-        $openid = new LightOpenID($_SERVER['HTTP_HOST']); //TODO: Change this to the proper url later
+        $LoginServiceType = GetLoginServiceTypeByTechnology(0, $dbConnection);
+        /*$openid = new LightOpenID($_SERVER['HTTP_HOST']); //TODO: Change this to the proper url later
         $openid->identity = $LoginServiceType->LoginServiceDomain;
         $openid->required = array('namePerson/first', 'namePerson/last', 'contact/email');
         if($openid->validate()){
@@ -50,8 +54,12 @@ switch($ServiceID){
         else{header('Location: ' . $openid->authUrl());die();} //Redirect to OpenID page.
         */
         
-        $UserID = $_GET['UserID'];
-        if($UserID!=null) {
+        $LoginID = $_GET['LoginID'];
+        if($LoginID!=null) {
+            $_SESSION['AuthUserFirstName'] = $UserFirstName;
+            $_SESSION['AuthUserLastName'] = $UserLastName;
+            $_SESSION['AuthUserEmail'] = $UserEmail;
+            $_SESSION['LoginID'] = $LoginID;
             $Validate = true;
         } else {
             $Validate = false;
@@ -63,7 +71,7 @@ switch($ServiceID){
 if($Validate){
     //print_r($LoginID);
     //echo "<script>alert('".$LoginID."')</script>";
-    //$UserID = GetUserIDFromLoginID($LoginID, $dbConnection, $ServiceID);
+    $UserID = GetUserIDFromLoginID($LoginID, $dbConnection, $ServiceID);
     //echo $LoginID,'<br/>',$UserID; //DEBUG
     if($UserID==null){
         //User Not Found, Create a new User

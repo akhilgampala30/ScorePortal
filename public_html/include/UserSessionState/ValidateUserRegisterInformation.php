@@ -18,7 +18,7 @@ $Return = array(); //Init return array, sends json encoded array back to the pag
 //validate input information
 if(!isset($_POST['s']) || $_POST['s'] != 'reg0' || !isset($_SESSION['LoginID']) || empty($_SESSION['LoginID']))  {
     $Return['status'] = -2;
-    $Return['msg'] = 'http://www.youtube.com/watch?v=AfZKbjUPrSg'; //In case anyone actually pays attention.
+    $Return['msg'] = 'http://www.youtube.com/watch?v=AfZKbjUPrSg'; //.$_POST['s'].' '.$_POST['LoginID']In case anyone actually pays attention.
     die(json_encode($Return));
 }
 if(!isset($_POST['Agreement']) || $_POST['Agreement'] != 'Agree'){
