@@ -15,9 +15,12 @@ $dbConnection = connect();
 if(!isset($_GET['ServiceID'])){
     die("No Service ID Set");
 }
+
 $ServiceID = $_GET['ServiceID'];
 $_SESSION['ServiceID'] = $ServiceID;
 $Validate = false;
+$UserID = null;
+
 if(!isset($ServiceID)){ //If Invalid Request, Go back to root
     header('Location: ' . '/');
     die();
@@ -26,7 +29,7 @@ if(!isset($ServiceID)){ //If Invalid Request, Go back to root
 switch($ServiceID){
     case 0:
         //If Google OpenID
-        $LoginServiceType = GetLoginServiceTypeByTechnology(0, $dbConnection);
+        /*$LoginServiceType = GetLoginServiceTypeByTechnology(0, $dbConnection);
         $openid = new LightOpenID($_SERVER['HTTP_HOST']); //TODO: Change this to the proper url later
         $openid->identity = $LoginServiceType->LoginServiceDomain;
         $openid->required = array('namePerson/first', 'namePerson/last', 'contact/email');
@@ -45,6 +48,14 @@ switch($ServiceID){
             $_SESSION['LoginID'] = $LoginID;
         }
         else{header('Location: ' . $openid->authUrl());die();} //Redirect to OpenID page.
+        */
+        
+        $UserID = $_GET['UserID'];
+        if($UserID!=null) {
+            $Validate = true;
+        } else {
+            $Validate = false;
+        }
 
         break;
 }
@@ -52,7 +63,7 @@ switch($ServiceID){
 if($Validate){
     //print_r($LoginID);
     //echo "<script>alert('".$LoginID."')</script>";
-    $UserID = GetUserIDFromLoginID($LoginID, $dbConnection, $ServiceID);
+    //$UserID = GetUserIDFromLoginID($LoginID, $dbConnection, $ServiceID);
     //echo $LoginID,'<br/>',$UserID; //DEBUG
     if($UserID==null){
         //User Not Found, Create a new User

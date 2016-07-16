@@ -1,9 +1,10 @@
 function onSuccess(googleUser) {
-	var profile = googleUser.getBasicProfile();
+	/*var profile = googleUser.getBasicProfile();
 	console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
 	console.log('Name: ' + profile.getName());
 	console.log('Image URL: ' + profile.getImageUrl());
-	console.log('Email: ' + profile.getEmail());
+	console.log('Email: ' + profile.getEmail());*/
+	document.location.href = '/include/UserSessionState/CheckID.php?ServiceID=0&UserID='+googleUser.getBasicProfile().getId();
 }
 
 function onFailure(error) {
