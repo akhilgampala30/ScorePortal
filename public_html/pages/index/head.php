@@ -7,3 +7,4 @@
 ?>
 <link rel="stylesheet" type="text/css" href="/pages/index/style/index.css">
 <script src="pages/index/js/Interactives.js"></script>
+<script src="pages/index/js/GoogleInit.js"></script>

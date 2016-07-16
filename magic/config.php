@@ -14,9 +14,9 @@ $config['ClassAverageHistoryCutOff'] = 5;
 switch (ENV) {
     case 'Mike':
         $config['Connection'] = 'localhost';
-        $config['Database'] = 'local_db_name';
-        $config['Username'] = 'spdev';
-        $config['Password'] = 'reall_fancy_password_here';
+        $config['Database'] = 'spdev_scoreportalunity';
+        $config['Username'] = 'root';
+        $config['Password'] = 'password';
         break;
     case 'Production':
         $config['Connection'] = 'localhost';
