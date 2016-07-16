@@ -177,6 +177,7 @@
 #RightColumn {
     float: right;
     width: 340px;
+    text-align: center;
 }
 
 #RightColumnTitle {
@@ -300,4 +301,9 @@
     position: relative !important;
     left: 24px !important;
     top: -2px !important;
+}
+
+#my-signin2 {
+    margin-top: 60px;
+    display: inline-block;
 }

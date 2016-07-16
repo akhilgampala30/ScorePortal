@@ -162,18 +162,7 @@
     <div id="JavascriptWarning" style="text-align:center; margin-top: 15px;">
         Please enable Javascript to use this site.
     </div>
-    <div id="ConnectButtonsContainer" style="display:none;">
-        <a onclick="LoginClick();return false;" href="/include/UserSessionState/CheckID.php?ServiceID=0">
-            <div class="ConnectButtons" id="GoogleConnectButton">
-                <div class="ConnectButtonLogo">
-
-                </div>
-                <div class="ConnectButtonText">
-                    <span>Login with </span><span class="ConnectServiceName">Google</span>
-                </div>
-            </div>
-        </a>
-    </div>
+    <div id="my-signin2"></div>
     <!--
     <div id="ConnectButtonsContainer" style="display:none;">
         <a href="#Yahoo">
