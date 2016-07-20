@@ -25,6 +25,7 @@
                 <td>
                     <select name="School" class="SchoolSelector">
                         <option value="1">Arcadia High School</option>
+                        <option value="2">Arcadia High School (Summer)</option>
                         <!--<option value="2">San Marino High School</option>
                         <option value="3">La Salle High School</option>-->
                     </select>

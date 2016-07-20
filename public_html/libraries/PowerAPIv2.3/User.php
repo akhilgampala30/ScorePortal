@@ -46,6 +46,10 @@ class User {
 	 * @return string PESC HighSchoolTranscript
 	*/
 	public function fetchTranscript() {
+
+		 /*'login' => 'pearson',
+            'password' => 'm0bApP5',*/
+
 		$result = $this->core->_request('guardian/studentdata.xml?ac=download');
 		
 		return $result;
@@ -82,11 +86,15 @@ class User {
 		/* Parse classes */
 		preg_match_all('/<tr class="center" bgcolor="(.*?)">(.*?)<\/tr>/s', $result, $classes, PREG_SET_ORDER);
 
+		$classesA = array();
+
 		foreach ($classes as $class) {
 			if (preg_match('/<td align="left">(.*?)(&nbsp;|&bbsp;)<br>(.*?)<a href="mailto:(.*?)">(.*?)<\/a>(.*?)<\/td>/mu', $class[2])) //TODO: This doesn't match the teacher name currently
 				$classesA[] = new Course($this->core, $class[2], $terms);
 		}
 		
+		//print_r($classesA);
+
 		return $classesA;
 	}
 

@@ -65,5 +65,5 @@
         </div>
     </a>
 </div>
-<iframe src="/include/UserSessionState/RegisterUser.php" style="display:none;">
+<iframe src="/include/UserSessionState/RegisterUser.php" style="display:block">
 </iframe>

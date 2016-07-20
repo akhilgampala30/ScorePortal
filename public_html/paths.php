@@ -39,6 +39,9 @@ $path['PowerAPICore.php']= $_SERVER['DOCUMENT_ROOT'].'/libraries/PowerAPIv2.3/Co
 $path['PowerAPICourse.php']= $_SERVER['DOCUMENT_ROOT'].'/libraries/PowerAPIv2.3/Course.php';
 $path['PowerAPIUser.php']= $_SERVER['DOCUMENT_ROOT'].'/libraries/PowerAPIv2.3/User.php';
 
+// PowerAPIv2014
+$path['PowerAPIv2014.php'] = $_SERVER['DOCUMENT_ROOT'].'/libraries/PowerAPIv2014/Core.php';
+
 //Misc
 $path['UpdateStatus.php'] = $_SERVER['DOCUMENT_ROOT'].'/pages/register/UpdateStatus.php';
 $path['LoginUpdate.php'] = $_SERVER['DOCUMENT_ROOT'].'/include/UserSessionState/LoginUpdate.php';

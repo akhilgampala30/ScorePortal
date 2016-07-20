@@ -15,6 +15,10 @@ require $path['Database.php'];
 require $path['UpdateStatus.php'];
 require $path['ImportXML.php'];
 require $path['ScreenScrap.php'];
+require $path['PowerAPIv2014.php'];
+
+
+echo "<script>console.log('starting RegisterUser.php...');</script>";
 
 //TODO: Remove This
 if($_SESSION['AuthUserEmail']=="scoreportalta@gmail.com"){
@@ -49,6 +53,8 @@ $dbConnection = connect(); //Set Connection for this session
 $getUserID = GetUserIDFromLoginID($_SESSION['LoginID'], $dbConnection, $_SESSION['ServiceID']);
 $getStudentID = GetStudentIDFromUserID($_SESSION['UserID'], $dbConnection);
 
+//echo "<script>console.log('getStudentID: {$getStudentID}');</script>";
+
 if($getUserID !== false && $getStudentID !== false){
     die("Expired Registration Token");
 }
@@ -66,9 +72,15 @@ SetBulletColor(1, 'blue');
 set_time_limit(120); //To prevent blocking our servers with abnormally long requests
 
 //session_write_close(); //Prevents other scripts from the user being locked during the long request
-$Transcript = $PSUser->fetchTranscript();
+//$Transcript = $PSUser->fetchTranscript();
 //session_start(); //Gets the session back
 //echo ($Transcript);
+
+// https://pssummer.ausd.net/pearson-rest/services/listServices
+$Student = PowerAPI\PowerAPI::authenticate("https://powerschool.ausd.net/", $_SESSION['StudentID'], $_SESSION['StudentPassword']);
+$Transcript = $Student->fetchTranscript();
+//var_dump($Transcript);
+
 if($Transcript === false){
     SetBulletColor(1, 'red');
     ErrorMessageVisible(); //Show error message if transcript times out
@@ -78,13 +90,21 @@ if($Transcript === false){
 //SETTING UP ACCOUNT
 SetBulletColor(1, 'green');
 SetBulletColor(2, 'blue');
-$XMLFirstName='';$XMLLastName='';
+
+$XMLFirstName='';
+$XMLFirstName=$Transcript->studentDataVOs->student->firstName;
+$XMLLastName='';
+$XMLLastName=$Transcript->studentDataVOs->student->lastName;
+/*
 if(preg_match_all('/<FirstName>(.*?)<\/FirstName>/',$Transcript, $fMatches) == 1){
     $XMLFirstName = $fMatches[1][0];
 }
 if(preg_match_all('/<LastName>(.*?)<\/LastName>/',$Transcript, $lMatches) == 1){
     $XMLLastName = $lMatches[1][0];
 }
+*/
+
+//echo "<script>console.log('Transcript: {".addslashes($Transcript)."}; \n\rFirstName: {$XMLFirstName}; LastName: {$XMLLastName}');</script>";
 //See if the credentials provided already match an existing student, if so, match the user with that student
 $StudentExists = CheckIfStudentExists($StudentID, $StudentPassword, $SchoolID, $dbConnection);
 if($StudentExists !== false){
@@ -100,10 +120,14 @@ else{ //If they're new
         $dbStudentID = AddStudentToDatabase($FirstName, $LastName, $SchoolID, $StudentID, $StudentPassword, $Email);
     }
 }
+
 if(isset($_SESSION['ValidUser']) && $_SESSION['ValidUser'] && isset($_SESSION['UserID'])){
     $dbUserID = $_SESSION['UserID']; //This user is already valid but was unlinked
+    echo "Adding user to db (not)";
 }else{
+    echo "Adding user to db";
     $dbUserID = AddUserToDatabase($FirstName,$LastName,$Email);
+    echo "Adding user to db SUCESS!!! ".$dbUserID." ";
     AddLoginUserService($_SESSION['ServiceID'], $_SESSION['LoginID'], $dbUserID);
 }
 AddStudent_User($dbStudentID, $dbUserID, $dbConnection);

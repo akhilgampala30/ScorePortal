@@ -38,7 +38,10 @@ $(function(){
                     ButtonObj.children().css('font-size','22px');
                     break;
             }
-            //console.log(data);
+            /*$('#ErrorMessage').slideDown().html(data);
+            ButtonObj.css('background-image','none');
+            ButtonObj.children().css('font-size','22px');*/
+            console.log(data);
         });
     });
 });
@@ -47,7 +50,7 @@ function ValidateForm(){ //TODO: Enhance validation
     var DistrictID = $("input[name='DistrictID']").val().replace(/ /g,'');
     var DistrictPassword = $("input[name='DistrictPassword']").val().replace(/ /g,'');
     var Agree = $("input[name='Agreement']").is(':checked');
-    if(SelectedSchoolID == 1
+    if((SelectedSchoolID == 1 || SelectedSchoolID==2)
         && DistrictID!=''
         && DistrictPassword!=''
         && Agree)
